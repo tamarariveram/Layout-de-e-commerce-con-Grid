@@ -1,5 +1,35 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "menu menu"
+    "categorías productos"
+    "pie-pag pie-pag";
+  height: 100vh;
+  grid-template-rows: 8% 1fr 8%;
+}
+
+header {
+  background-color: rgb(255, 177, 149);
+  grid-area: menu;
+}
+
+aside {
+  background-color: rgb(149, 177, 255);
+  grid-area: categorías;
+}
+
+main {
+  background-color: rgb(255, 155, 208);
+  grid-area: productos;
+}
+
+footer {
+  background-color: rgb(149, 255, 177);
+  grid-area: pie-pag;
 }
