@@ -41,6 +41,11 @@ header {
   padding: 10px 40px;
 }
 
+.header-top p {
+  color: var(--primary-color);
+  font-size: 0.9em;
+}
+
 menu a:hover {
   color: var(--primary-color);
   font-weight: 700;
@@ -92,11 +97,84 @@ li {
 }
 
 main {
-  background-color: rgb(255, 155, 208);
   grid-area: productos;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px;
+  width: 100%;
+}
+
+.card-producto {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(236, 236, 236, 0.547);
+  gap: 20px;
+}
+
+.card-producto img {
+  width: 100%;
+}
+
+h4 {
+  color: black;
+  font-weight: 300;
+}
+
+.card-producto p {
+  color: black;
+  font-weight: 800;
+  font-size: 1.2em;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #035594;
 }
 
 footer {
-  background-color: rgb(149, 255, 177);
+  background-color: var(--primary-color);
   grid-area: pie-pag;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "menu"
+      "categorías"
+      "productos"
+      "pie-pag";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto;
+  }
+
+  menu a {
+    margin-right: 15px;
+    font-size: 0.9em;
+  }
+
+  header img {
+    width: 20%;
+  }
+
+  aside {
+    padding: 10px;
+  }
+
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
 }
