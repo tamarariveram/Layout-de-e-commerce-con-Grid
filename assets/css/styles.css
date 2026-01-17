@@ -46,7 +46,7 @@ header {
   font-size: 0.9em;
 }
 
-menu a:hover {
+nav a:hover {
   color: var(--primary-color);
   font-weight: 700;
   cursor: pointer;
@@ -62,7 +62,7 @@ h1 {
   font-size: 1.6em;
 }
 
-menu a {
+nav a {
   text-decoration: none;
   color: black;
   font-weight: 600;
@@ -73,6 +73,9 @@ aside {
   background-color: rgba(240, 244, 255, 0.381);
   grid-area: categorías;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 hr {
@@ -160,7 +163,7 @@ footer {
     grid-template-rows: auto 1fr auto auto;
   }
 
-  menu a {
+  nav a {
     margin-right: 15px;
     font-size: 0.9em;
   }
